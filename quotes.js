@@ -26,11 +26,12 @@ function unhideElements() {
   quoteBtn.classList.remove("hidden");
   quotePara.classList.remove("hidden");
   quoteForm.classList.remove("hidden");
-  heading.textContent = `Hi ${nameValue}, I am a random quote Generator`;
+  heading.textContent = `Hi ${nameValue}, I am a Random Quote Generator`;
 }
 
 async function getQuote() {
-  heading.textContent = `Hi ${nameValue}, I am a random quote Generator`;
+  heading.classList.add("hidden");
+  heading.textContent = `Hi ${nameValue}, I am a Random Quote Generator`;
   const res = await fetch(api);
   const data = await res.json();
   randomQuote = data[0].content;
